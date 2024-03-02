@@ -22,6 +22,10 @@ contract InsuranceToken is IERC20 {
 
     mapping(address => uint256) private _balances;
 
+    constructor() {
+     _mint(msg.sender, 600000000000000000 * (10 ** decimals()));
+    }
+
     function name() external pure returns (string memory) {
         return _name;
     }
@@ -30,7 +34,7 @@ contract InsuranceToken is IERC20 {
      return _symbol;
     }
 
-    function decimal() external pure returns (uint8) {
+    function decimals() public pure returns (uint8) {
      return 18;
     }
 
