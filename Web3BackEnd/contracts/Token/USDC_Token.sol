@@ -5,11 +5,11 @@ import {IERC20} from "./IERC20.sol";
 import {SafeMath} from "./SafeMath.sol";
 
 
-contract InsuranceToken is IERC20 {
+contract USDC_Token is IERC20 {
     using SafeMath for uint256;
 
-    string private constant _name = "Insured";
-    string private constant _symbol = "IST";
+    string private constant _name = "USDC Token";
+    string private constant _symbol = "USDC";
 
     mapping(address => mapping(address => uint256)) private _allowed;
 
